@@ -1,0 +1,65 @@
+.main {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.formBox {
+  background: #171616;
+  padding: 20px;
+  border-radius: 20px;
+  border: white;
+  border-style: groove;
+  width: 700px;
+  height: 750px;
+  font-size: 25px;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 10px;
+  width: 97%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  height: 35px;
+  font-size: 25px;
+}
+
+.interestsBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px;
+}
+
+.checkboxBody {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.signupButton {
+  margin-top: 10px;
+  position: absolute;
+  right: 35%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-size: 25px;
+}
