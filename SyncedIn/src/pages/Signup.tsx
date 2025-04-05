@@ -11,6 +11,7 @@ function Signup() {
   const [email, setEmail] = useState('');
   const [interests, setInterests] = useState<string[]>([]);
   const [isChecked, setIsChecked] = useState(false);
+  const [resume, setResume] = useState('');
 
   const allInterests = [
     "Java", "C++", "C#", "Frontend", "UML Designer",
@@ -31,8 +32,8 @@ function Signup() {
       alert('Please fill out all the information before signing up');
     }
     else {
-      setUserData({email, fullName, interests});
-      navigate('/search');
+      setUserData({email, fullName,resume, interests});
+      navigate('/homepage');
     }
   };
 
@@ -65,6 +66,14 @@ function Signup() {
             type="password"
             className="inputBox"
           />
+
+          <label> Resume</label>
+          <input
+            type="file"
+            className="inputBox"
+            value ={resume}
+            onChange={(res) => setResume(res.target.value)}
+            ></input>
 
           <label> Interests </label>
           <div className="interestsBody">
