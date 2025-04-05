@@ -1,4 +1,4 @@
-import "./HomePage.css"
+import "./Application.css"
 import {useNavigate} from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 
@@ -49,7 +49,7 @@ const Application = () => {
     const {id} = useParams<{ id: string }>(); 
     const navig = useNavigate();
 
-    const job = mockJobs.find((job) => job.id == id);
+    const job = jobs.find((job) => job.id == id);
 
     const handleRedirect = () => {
         navig("/onlineassessment"); 
@@ -67,6 +67,13 @@ const Application = () => {
                 <p><span className="job-desc">Location:</span> {job.location}</p>
                 <p><span className="job-desc">Description:</span> {job.description}</p>
                 <p><span className="job-desc">Skills:</span> {job.skills.join(", ")}</p>
+            </div>
+
+            <div className="github-input">
+                
+                <input type="url" name="github-link1" className="githublink" id="ghl1" placeholder="GitHub Project #1 Link"/>
+                <p></p>
+                <input type="url" name="github-link2" className="githublink" id="ghl2" placeholder="GitHub Project #2 Link"/>
             </div>
 
             <button onClick={handleRedirect} className="assessment-button">
