@@ -13,12 +13,11 @@ const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
   const navigate = useNavigate()
 
   const handleFilterJobs = () => {
-    // In a real app, this would apply filters
+   
     console.log("Filtering jobs")
   }
 
   const handleFilterMatches = () => {
-    // In a real app, this would show AI matches
     console.log("Showing AI matches")
   }
 
@@ -31,14 +30,6 @@ const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
         </div>
       </div>
       <ResumeCard resumePath={user.resume} hasAiFeedback={true} />
-      <div className="filter-actions">
-        <button className="btn-secondary filter-btn" onClick={handleFilterJobs}>
-          Filter Jobs
-        </button>
-        <button className="btn-secondary filter-btn" onClick={handleFilterMatches}>
-          Filter Matches
-        </button>
-      </div>
     </div>
   )
 }

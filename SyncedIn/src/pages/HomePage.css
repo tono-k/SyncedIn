@@ -13,14 +13,13 @@
   .home-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 0px;
   }
   
   .jobs-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
   }
   
   .jobs-header h2 {
@@ -28,11 +27,12 @@
     font-weight: 600;
   }
   
+  
   .jobs-filter select {
     padding: 8px 12px;
     border-radius: var(--border-radius);
-    border: 1px solid #ddd;
-    background-color: white;
+    background-color: var(--secondary-light);
+    color: var(--text-light);
   }
   
   .jobs-grid {

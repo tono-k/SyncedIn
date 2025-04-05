@@ -72,9 +72,7 @@ const HomePage = () => {
           <h2>Job Recommendations</h2>
           <div className="jobs-filter">
             <select defaultValue="relevance">
-              <option value="relevance">Most Relevant</option>
-              <option value="recent">Most Recent</option>
-              <option value="salary">Highest Salary</option>
+              <option value="location">Filter Based On Resume</option>
             </select>
           </div>
         </div>
