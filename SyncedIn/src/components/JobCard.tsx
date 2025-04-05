@@ -1,5 +1,3 @@
-"use client"
-
 import type React from "react"
 
 import { useState } from "react"
@@ -23,7 +21,15 @@ const JobCard = ({ id, company, title, location, description, skills, applied = 
   const handleApply = (e: React.MouseEvent) => {
     e.stopPropagation()
     if (!isApplied) {
-      navigate(`/application/${id}`)
+      navigate(`/application/${id}`, {
+        state: { 
+          company,
+          title,
+          location,
+          description, 
+          skills 
+        }
+      });
     }
   }
 

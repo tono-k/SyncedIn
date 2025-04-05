@@ -56,7 +56,7 @@ const HomePage = () => {
     // Simulate API call
     setTimeout(() => {
       setLoading(false)
-    }, 1000)
+    }, 500)
   }, [])
 
   return (
@@ -78,7 +78,7 @@ const HomePage = () => {
             </select>
           </div>
         </div>
-        
+
         <div className="jobs-grid">
           {loading ? (
             <div className="loading-jobs">Loading jobs...</div>
