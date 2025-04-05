@@ -39,8 +39,6 @@ function Signup() {
 
   return (
     <>
-      <Layout/>
-      
       <div className="main">
         <div className="formBox">
           <div className="formTitle"> SyncedIn Inc. </div>
