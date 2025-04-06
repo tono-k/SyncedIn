@@ -1,10 +1,21 @@
 .app-container{
     display: flex;
-    flex-direction: column;
+    min-height: 82vh;
 }
 
-.job-details{
-    margin-top: 100px;
+.left-container {
+    padding-right: 190px;
+    margin-left: 150px;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 190px;
+    margin-right: 250px;
+    padding-top: 45px;
+    height: fit-content;
 }
 
 span.job-desc {
@@ -16,7 +27,7 @@ span.job-desc {
 }
 
 .githublink {
-    width: 100%;
+    width: 90%;
     padding: 12px 20px;
     font-size: 16px;
     font-family: 'Arial', sans-serif;
@@ -35,7 +46,7 @@ span.job-desc {
 
 
 .assessment-button {
-    margin-top: 20px;
+    margin-top: 5px;
     color: white;
     font-weight: 500;
     border-radius: 4px;
@@ -47,4 +58,61 @@ span.job-desc {
     border-color: transparent;
     transition: var(--transition);
     transform: translateY(-2px);
+}
+
+
+
+.doc-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    
+    border-radius: 8px;
+    border: 1px dashed white;
+    height: fit-content;
+}
+
+.doc-box h2 {
+    color: white;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.file-info {
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    background-color: #f8f8f8;
+    border: 1px black;
+    border-radius: 5px;
+}
+
+.file-input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px dashed white;
+}
+
+.file-input:hover{
+    transition: var(--transition);
+    transform: translateY(-1px);
+}
+
+.OA-button{
+    margin-top: 8px;
+}
+
+.terms {
+    margin-top: 15px;
+}
+
+.terms-style{
+    font-style: italic;
+    text-decoration: underline;
 }

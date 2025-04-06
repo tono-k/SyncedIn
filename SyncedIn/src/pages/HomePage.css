@@ -1,5 +1,4 @@
 .home-page {
-<<<<<<< HEAD
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 24px;
@@ -24,12 +23,14 @@
 }
 
 .jobs-header h2 {
+  margin-top: 150px;
   font-size: 24px;
   font-weight: 600;
 }
 
 
 .jobs-filter select {
+  margin-top: 125px;
   padding: 8px 12px;
   border-radius: var(--border-radius);
   background-color: var(--secondary-light);
@@ -54,48 +55,6 @@
 
 @media (max-width: 768px) {
   .home-page {
-=======
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 24px;
-  }
-  
-  .home-sidebar {
-    position: sticky;
-    top: 50px;
-    height: fit-content;
-  }
-  
-  .home-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  }
-  
-  .jobs-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .jobs-header h2 {
-    margin-top: 150px;
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  
-  .jobs-filter select {
-    margin-top: 125px;
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
-    background-color: var(--secondary-light);
-    color: var(--text-light);
-  }
-  
-  .jobs-grid {
-    display: grid;
->>>>>>> origin/homepage
     grid-template-columns: 1fr;
   }
 
