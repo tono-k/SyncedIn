@@ -1,5 +1,3 @@
-"use client"
-
 import { useNavigate } from "react-router-dom"
 import "./ResumeCard.css"
 
@@ -13,7 +11,12 @@ const ResumeCard = ({ resumePath, hasAiFeedback = false }: ResumeCardProps) => {
 
   const handleFeedbackClick = () => {
     navigate("/resume-feedback")
+
   }
+  const handleFilterJobs = () => {
+    console.log("Showing AI matches")
+  }
+  
 
   return (
     <div className="resume-card">

@@ -3,6 +3,9 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    margin-top: 76px;
+    position: relative;
+
   }
   
   .profile-info {
@@ -20,7 +23,7 @@
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   
   .avatar-placeholder {
@@ -36,10 +39,17 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    
   }
   
   .filter-btn {
     width: 100%;
+    background-color: var(--secondary-light);
+    color: var(--text-light);
+    border-radius:  var(--border-radius);
+    justify-content: center;
+    position: relative;
+
   }
   
   

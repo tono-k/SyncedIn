@@ -6,16 +6,28 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary: #25262e;
+  --primary-light: #39393f;
+  --primary-dark: #1e1e1a57;
+  --secondary: #6a5d4b;
+  --secondary-light: #877762;
+  --secondary-dark: #6f4a1d;
+  --text-light: #ffffff;
+  --text-dark: #212121;
+  --background: #f5f5f5;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --navbar-bg: #07005c;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --card-bg: #33333197;
+  --card-bg-light: #f9f9f9;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 a:hover {

@@ -1,3 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .topBar{
     width: 100%;
     background: #07005C;
@@ -5,27 +13,35 @@
     padding: 15px 20px;
     font-size: 30px;
     text-align: left;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
 
 }
 .navbar {
-    
-    background-color: var(--primary);
+    background-color: var(--navbar-bg);
     color: var(--text-light);
-    padding: 16px 0;
+    font-size: 30px;
+    text-align: left;
+    padding: 15px 20px;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
-    top: 0;
+    display: flex;
+    width: 100%;
+    top:0;
     z-index: 100;
   }
   
   .navbar-container {
+    width: 100%;
+    background-color: var(--navbar-bg);
+    color: var(--text-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100 auto;
     padding: 0 20px;
-    
   }

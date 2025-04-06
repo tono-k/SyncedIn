@@ -6,6 +6,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    top:auto;
   }
   
   .resume-header {
@@ -45,6 +46,23 @@
   
   .resume-actions button {
     width: 100%;
+    background-color: var(--secondary-light);
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  .filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .filter-btn {
+    width: 100%;
+    background-color: var(--secondary-light);
+    color: var(--text-light);
+    border-radius:  var(--border-radius);
+    justify-content: center;
+    position: relative;
+
   }
   
   
