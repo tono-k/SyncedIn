@@ -1,4 +1,15 @@
+.app-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.job-details{
+    margin-top: 100px;
+}
+
 span.job-desc {
+    position: sticky;
+    top: 0px;
     font-weight: bold;       
     color: inherit;         
     font-style: normal;      
@@ -20,4 +31,20 @@ span.job-desc {
 .githublink:focus {
     border-color:  black;
     background-color: #ffffff;
+}
+
+
+.assessment-button {
+    margin-top: 20px;
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.assessment-button:hover{
+    background-color: var(--primary-light);
+    border-color: transparent;
+    transition: var(--transition);
+    transform: translateY(-2px);
 }
