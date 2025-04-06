@@ -4,6 +4,7 @@ export interface UserData {
   email: string;
   fullName: string;
   interests: string[];
+  resume: string;
 }
 
 export interface UserContextProps {
@@ -18,6 +19,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     email: '',
     fullName: '',
     interests: [],
+    resume: '',
   });
 
   return (

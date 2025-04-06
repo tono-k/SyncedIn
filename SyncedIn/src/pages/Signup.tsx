@@ -1,7 +1,6 @@
 import {useContext, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {UserContext, UserContextProps} from '../UserContext'; 
-import Layout from './Layout';
 import './Signup.css';
 
 function Signup() {
@@ -71,7 +70,7 @@ function Signup() {
             className="inputBox"
             value ={resume}
             onChange={(res) => setResume(res.target.value)}
-            ></input>
+          />
 
           <label> Interests </label>
           <div className="interestsBody">
