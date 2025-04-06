@@ -45,7 +45,7 @@
   
   .filter-btn {
     width: 100%;
-    background-color: var(--secondary-light);
+    background-color: var(--secondary);
     color: var(--text-light);
     border-radius:  var(--border-radius);
     justify-content: center;
