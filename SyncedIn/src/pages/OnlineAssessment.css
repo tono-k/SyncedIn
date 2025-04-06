@@ -1,0 +1,16 @@
+.assessmentBox {
+    margin-top: 100px;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+.submitButton {
+    margin-top: 20px;
+    margin-left: 1000px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
