@@ -41,7 +41,7 @@ const JobCard = ({ id, company, title, location, description, skills, applied = 
     <div className="job-card" onClick={handleCardClick}>
       <div className="job-card-header">
         <h3>{title}</h3>
-        <div className={`job-status ${isApplied ? "applied" : ""}`}>{isApplied ? "Applied" : ""}</div>
+        
       </div>
       <div className="job-card-company">{company}</div>
       <div className="job-card-location">{location}</div>

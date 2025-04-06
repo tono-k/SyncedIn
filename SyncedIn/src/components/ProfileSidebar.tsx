@@ -12,15 +12,6 @@ interface ProfileSidebarProps {
 const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
   const navigate = useNavigate()
 
-  const handleFilterJobs = () => {
-   
-    console.log("Filtering jobs")
-  }
-
-  const handleFilterMatches = () => {
-    console.log("Showing AI matches")
-  }
-
   return (
     <div className="profile-sidebar">
       <div className="profile-info">
