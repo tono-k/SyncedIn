@@ -1,21 +1,22 @@
 import { Link, useLocation } from "react-router-dom"
 import "./Navbar.css"
 
-export const Navbar = () => {
+function Navbar (){
   const location = useLocation()
+  const isSignup = location.pathname === "/";
+
   return (
-    <nav className="navbar">
-         <div className="navbar-container">
-         <Link to="/homepage">
-          SyncedIn
-        </Link>
-      <Link to="/homepage" className={`nav-link ${location.pathname === "/homepage" ? "active" : ""}`}>
-        Home
-      </Link>
-      
+    <div className="navbar">
+      <div className="navbar-container"> 
+        {/* only navigate to homescreen if you're not in the signup page*/}
+        {!isSignup ?  
+          (<Link to="/homepage"> SyncedIn </Link>) 
+        :
+          (<div> SyncedIn </div>)
+        }
       </div>
-    </nav>
+    </div>
   )
-
-
 }
+
+export default Navbar;

@@ -19,21 +19,22 @@ body {
 
 }
 .navbar {
-    background-color: var(--navbar-bg);
-    color: var(--text-light);
-    font-size: 30px;
-    text-align: left;
-    padding: 15px 20px;
-    left: 0;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    display: flex;
-    width: 100%;
-    top:0;
-    z-index: 100;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--navbar-bg);
+  color: var(--text-light);
+  font-size: 30px;
+  text-align: left;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+}
+
+
   .navbar-container {
     width: 100%;
     background-color: var(--navbar-bg);
