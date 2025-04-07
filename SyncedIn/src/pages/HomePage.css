@@ -1,0 +1,66 @@
+.home-page {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+
+  }
+  
+  .home-sidebar {
+    position: sticky;
+    top: 50px;
+    height: fit-content;
+  }
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .jobs-header h2 {
+    margin-top: 120px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  
+  .jobs-filter select {
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary);
+    color: var(--text-light);
+  }
+  
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .loading-jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  @media (max-width: 768px) {
+    .home-page {
+      grid-template-columns: 1fr;
+    }
+  
+    .home-sidebar {
+      position: static;
+    }
+  }
+  
+  

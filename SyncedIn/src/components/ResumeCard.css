@@ -1,0 +1,68 @@
+.resume-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    top:auto;
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .resume-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .resume-preview {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 16px;
+    min-height: 200px;
+  }
+  
+  .resume-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .resume-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .resume-actions button {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  .filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .filter-btn {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    border-radius:  var(--border-radius);
+    justify-content: center;
+    position: relative;
+
+  }
+  
+  

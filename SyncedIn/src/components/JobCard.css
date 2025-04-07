@@ -1,0 +1,109 @@
+.job-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  
+  .job-card-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .job-status {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .job-status.applied {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  .job-card-company {
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--secondary-light);
+    text-decoration: bold;
+    font-size: 18px;
+
+  }
+  
+  .job-card-location {
+    color: var(--secondary);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  
+  .job-card-description {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-light);
+  }
+  
+  .job-card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--text-dark)
+  }
+  
+  .skill-tag {
+    background-color: #f1f1f1;
+    padding: 8px 13px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-dark);
+  }
+  
+  .job-card-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .apply-btn {
+    background-color: var(--apply-bg);
+    color: #1976d2;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .apply-btn:hover:not(:disabled) {
+    background-color: var(--secondary);
+  }
+  
+  .apply-btn.applied {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    cursor: default;
+  }
+  
+  .apply-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  
