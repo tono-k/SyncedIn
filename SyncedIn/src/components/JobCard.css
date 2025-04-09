@@ -17,11 +17,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
   }
   
   .job-card-header h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
   }
   
@@ -38,21 +38,25 @@
   }
   
   .job-card-company {
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 4px;
+    color: var(--secondary-light);
+    text-decoration: bold;
+    font-size: 18px;
+
   }
   
   .job-card-location {
-    color: #666;
-    font-size: 14px;
+    color: var(--secondary);
+    font-size: 15px;
     margin-bottom: 12px;
   }
   
   .job-card-description {
     margin-bottom: 16px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    color: #444;
+    color: var(--text-light);
   }
   
   .job-card-skills {
@@ -60,14 +64,15 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 16px;
+    color: var(--text-dark)
   }
   
   .skill-tag {
     background-color: #f1f1f1;
-    padding: 4px 8px;
+    padding: 8px 13px;
     border-radius: 4px;
-    font-size: 12px;
-    color: #555;
+    font-size: 14px;
+    color: var(--text-dark);
   }
   
   .job-card-footer {
@@ -76,8 +81,8 @@
   }
   
   .apply-btn {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--apply-bg);
+    color: #1976d2;
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
@@ -87,12 +92,12 @@
   }
   
   .apply-btn:hover:not(:disabled) {
-    background-color: var(--primary-light);
+    background-color: var(--secondary);
   }
   
   .apply-btn.applied {
-    background-color: #e3f2fd;
-    color: #1976d2;
+    background-color: #ff8000;
+    color: #00ff8c;
     cursor: default;
   }
   

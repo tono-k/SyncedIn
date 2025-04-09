@@ -3,6 +3,7 @@ import Signup from './pages/Signup';
 import HomePage from './pages/HomePage';
 import Application from "./pages/Application"
 import Navbar from "./components/Navbar";
+import OnlineAssessment from './pages/OnlineAssessment';
 import Terms from "./pages/Terms"
 
 function App() {
@@ -10,15 +11,14 @@ function App() {
     <div>
       <Navbar/>
       <div className="content">
-    <Routes>
-      <Route path="/" element={<Signup/>} />
-      <Route path="/terms" element={<Terms/>} />
-      <Route path="/homepage" element={<HomePage/>} />
-      <Route path="/application/:id" element={<Application />} />
-      <Route path="/" element={<Signup/>} />
-      <Route path="/homepage" element={<HomePage/>} />
-    </Routes>
-       
+        <Routes>
+          <Route path="/" element={<Signup/>} />
+          <Route path="/terms" element={<Terms/>} />
+          <Route path="/homepage" element={<HomePage/>} />
+          {/* <Route path="/job/:id" element={< />} /> */}
+          <Route path="/application" element={<Application />} />
+          <Route path="/onlineassessment" element={<OnlineAssessment/>} />
+        </Routes>
       </div>
     </div>
   );
