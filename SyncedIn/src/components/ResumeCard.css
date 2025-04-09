@@ -1,68 +1,128 @@
 .resume-card {
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    top:auto;
-  }
-  
-  .resume-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .resume-header h3 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  .resume-preview {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    margin-bottom: 16px;
-    min-height: 200px;
-  }
-  
-  .resume-preview img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  
-  .resume-actions {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .resume-actions button {
-    width: 100%;
-    background-color: var(--secondary);
-    color: var(--text-light);
-    margin-bottom: 20px;
-  }
-  .filter-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .filter-btn {
-    width: 100%;
-    background-color: var(--secondary);
-    color: var(--text-light);
-    border-radius:  var(--border-radius);
-    justify-content: center;
-    position: relative;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  top: auto;
+}
 
-  }
-  
-  
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.resume-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ai-badge {
+  background-color: var(--primary);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.resume-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: 16px;
+  min-height: 200px;
+  border: 1px solid #e0e0e0;
+}
+
+.resume-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.resume-preview embed {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+}
+
+.resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume-actions button {
+  width: 100%;
+  background-color: var(--secondary);
+  color: var(--text-light);
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+button.btn-primary {
+  background-color: var(--primary);
+}
+
+button.btn-secondary {
+  background-color: var(--secondary);
+}
+
+button.btn-outline {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button.btn-outline:hover {
+  background-color: #e6f3fa; 
+  color: #0057a8;
+  transform: translateY(-1px);
+  border-color: #0057a8;
+}
+.filter-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-btn {
+  width: 100%;
+  background-color: var(--secondary);
+  color: var(--text-light);
+  border-radius: var(--border-radius);
+  justify-content: center;
+  position: relative;
+}
+
+/* Added for resume upload preview in Signup */
+.resume-preview-thumbnail {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-preview-thumbnail p {
+  margin: 0;
+  color: #2e7d32;
+  font-size: 14px;
+}
