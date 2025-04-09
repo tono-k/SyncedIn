@@ -46,22 +46,28 @@ span.job-desc {
 
 
 .assessment-button {
+    background-color: var(--apply-bg);
     margin-top: 5px;
-    color: white;
+    color: #1976d2;
     font-weight: 500;
     border-radius: 4px;
     transition: var(--transition);
 }
 
 .assessment-button:hover{
-    background-color: var(--primary-light);
+    background-color: var(--secondary);
     border-color: transparent;
     transition: var(--transition);
     transform: translateY(-2px);
 }
 
+.questions {
+    margin-top: 16px;
+}
 
-
+.question{
+    margin-top: 4px;
+}
 .doc-box {
     display: flex;
     flex-direction: column;
