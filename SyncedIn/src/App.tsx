@@ -11,16 +11,14 @@ function App() {
     <div>
       <Navbar/>
       <div className="content">
-    <Routes>
-      <Route path="/" element={<Signup/>} />
-      <Route path="/terms" element={<Terms/>} />
-      <Route path="/homepage" element={<HomePage/>} />
-      <Route path="/application/:id" element={<Application />} />
-      <Route path="/" element={<Signup/>} />
-      <Route path="/homepage" element={<HomePage/>} />
+        <Routes>
+          <Route path="/" element={<Signup/>} />
+          <Route path="/terms" element={<Terms/>} />
+          <Route path="/homepage" element={<HomePage/>} />
+          {/* <Route path="/job/:id" element={< />} /> */}
+          <Route path="/application" element={<Application />} />
           <Route path="/onlineassessment" element={<OnlineAssessment/>} />
-    </Routes>
-       
+        </Routes>
       </div>
     </div>
   );

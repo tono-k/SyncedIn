@@ -1,7 +1,30 @@
 import Editor from "@monaco-editor/react";
 import './OnlineAssessment.css';
+import {useContext} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
+import {UserContext, UserContextProps} from "../UserContext";
 
 function OnlineAssessment() {
+  const {addJobToUser} = useContext(UserContext) as UserContextProps;
+  const navigate = useNavigate();  
+  const {state} = useLocation();
+
+  const handleSubmit = () => {
+    alert("Application succesfully submitted");
+    
+    const AppliedJob = {
+      id: state.id,
+      company: state.company,
+      title: state.title,
+      location: state.location,
+      description: state.description,
+      skills: state.skills,
+    };
+
+    addJobToUser(AppliedJob);
+    navigate("/homepage");
+  }
+
     return (
       <> 
         <div className="assessmentBox">
@@ -16,7 +39,7 @@ function OnlineAssessment() {
                 }}
             />
         </div>
-        <div className="submitButton"> Submit </div>
+        <div className="submitButton" onClick={handleSubmit}> Submit </div>
       </>
     );
   }

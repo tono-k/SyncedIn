@@ -31,7 +31,7 @@ function Signup() {
       alert('Please fill out all the information before signing up');
     }
     else {
-      setUserData({email, fullName, resume, interests});
+      setUserData({email, fullName, resume, interests, AppliedJobs: []});
       navigate('/homepage');
     }
   };

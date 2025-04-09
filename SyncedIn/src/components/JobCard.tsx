@@ -21,8 +21,9 @@ const JobCard = ({ id, company, title, location, description, skills, applied = 
   const handleApply = (e: React.MouseEvent) => {
     e.stopPropagation()
     if (!isApplied) {
-      navigate(`/onlineassessment`, {
+      navigate(`/application`, {
         state: { 
+          id,
           company,
           title,
           location,

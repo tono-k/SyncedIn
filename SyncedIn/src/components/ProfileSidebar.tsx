@@ -26,4 +26,3 @@ const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
 }
 
 export default ProfileSidebar
-

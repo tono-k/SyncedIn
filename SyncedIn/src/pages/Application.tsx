@@ -1,30 +1,25 @@
 import "./Application.css";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, ChangeEvent } from "react";
 
 const Application = () => {
   const { state } = useLocation();
-  //const [jobs, set] = useState(mockJobs)
-  const { id } = useParams<{ id: string }>();
-  const navig = useNavigate();
-
-  //const job = jobs.find((job) => job.id == id);
+  const navigate = useNavigate();
+  const [fileName, setFileName] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
   const handleRedirect = () => {
-    navig("/onlineassessment");
+    navigate("/onlineassessment",  {
+      state: state
+    });
   };
 
-  const [fileName, setFileName] = useState("");
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const file = e.target.files?.[0];
     if (file) {
       setFileName(file.name);
     }
   };
-
-  const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
   // Handle checkbox change with event type
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,7 +70,6 @@ const Application = () => {
             </label>
         </div>
         <div className="OA-button">
-            
 
           <button onClick={handleRedirect} className="assessment-button" disabled={!termsAccepted}>
             Proceed to online assessment
