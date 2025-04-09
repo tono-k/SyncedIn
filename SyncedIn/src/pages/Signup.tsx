@@ -10,7 +10,8 @@ function Signup() {
   const [email, setEmail] = useState('');
   const [interests, setInterests] = useState<string[]>([]);
   const [isChecked, setIsChecked] = useState(false);
-  const [resume, setResume] = useState('');
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+  const [resumePreview, setResumePreview] = useState<string>('');
 
   const allInterests = [
     "Java", "C++", "C#", "Frontend", "UML Designer",
@@ -26,12 +27,31 @@ function Signup() {
     });
   };
 
+  const handleResumeUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    
+    if (files && files.length > 0) {
+      const file = files[0];
+      setResumeFile(file);
+      
+      // Create a URL for preview
+      const fileUrl = URL.createObjectURL(file);
+      setResumePreview(fileUrl);
+    }
+  };
+
   const CompleteSignUp = () => {
-    if (!fullName || !email || interests.length == 0 || !isChecked) {
+    if (!fullName || !email || interests.length === 0 || !isChecked || !resumeFile) {
       alert('Please fill out all the information before signing up');
     }
     else {
-      setUserData({email, fullName, resume, interests, AppliedJobs: []});
+      setUserData({
+        email, 
+        fullName, 
+        interests,
+        resume: resumePreview, // Store the URL to display the resume
+        AppliedJobs: []
+      });
       navigate('/homepage');
     }
   };
@@ -68,9 +88,14 @@ function Signup() {
           <input
             type="file"
             className="inputBox"
-            value ={resume}
-            onChange={(res) => setResume(res.target.value)}
+            accept=".pdf,.doc,.docx"
+            onChange={handleResumeUpload}
           />
+          {resumePreview && (
+            <div className="resume-preview-thumbnail">
+              <p>Resume uploaded successfully</p>
+            </div>
+          )}
 
           <label> Interests </label>
           <div className="interestsBody">
@@ -101,7 +126,6 @@ function Signup() {
 
         </div>
       </div>
-
     </>
   );
 }
