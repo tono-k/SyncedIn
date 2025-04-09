@@ -60,8 +60,13 @@ span.job-desc {
     transform: translateY(-2px);
 }
 
+.questions {
+    margin-top: 25px;
+}
 
-
+.question{
+    margin-top: 8px;
+}
 .doc-box {
     display: flex;
     flex-direction: column;

@@ -35,7 +35,7 @@ const Application = () => {
     <div className="app-container">
       <div className="left-container">
         <div className="job-details">
-          <h1>{state.title}</h1>
+          <h1>{state.title} Application</h1>
           <p>
             <span className="job-desc">Company:</span> {state.company}
           </p>
@@ -55,11 +55,42 @@ const Application = () => {
           <input type="url" name="github-link2" className="githublink" id="ghl2" placeholder="GitHub Project #2 Link"/>
         </div>
         
+        <div className="questions">
+          <div className="question">
+            <label htmlFor="worked-before">Have you worked at {state.company} before? </label>
+            <select id="worked-before" name="worked-before">
+              <option value="">Select...</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div className="question">
+          <label htmlFor="referral">Were you referred by anyone at {state.company}? </label>
+            <select id="referral" name="referral">
+              <option value="">Select...</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div className="question">
+            <label htmlFor="remote-work">Are you willing to work remotely, if the position allows for remote work?</label>
+            <select id="remote-work" name="remote-work">
+              <option value="">Select...</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="maybe">Maybe</option>
+            </select>
+          </div>
+
+        </div>
+
       </div>
 
       <div className="right-container">
         <div className="doc-box">
-          <h2>Upload Your Document</h2>
+          <h2>Upload Your Cover Letter</h2>
           <p>Accepted formats: .pdf .docx .txt</p>
           <input className="file-input" type="file" id="document-upload" onChange={handleFileChange} accept=".pdf,.docx,.txt"/>
           {fileName && (
