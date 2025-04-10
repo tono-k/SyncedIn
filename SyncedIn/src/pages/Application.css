@@ -1,124 +1,153 @@
-.app-container{
+.app-container {
     display: flex;
-    min-height: 82vh;
+    justify-content: center;
+    padding: 40px;
+    gap: 80px;
+    min-height: 85vh;
 }
 
 .left-container {
-    padding-right: 190px;
-    margin-left: 150px;
+    flex: 1;
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .right-container {
+    flex: 0.8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 190px;
-    margin-right: 250px;
-    padding-top: 45px;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     height: fit-content;
+    margin-top: 50px;
+}
+
+.left-container h1 {
+    margin-bottom: 20px;
+    color: #f8f8f8;
+}
+
+.job-details p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #ddd;
 }
 
 span.job-desc {
-    position: sticky;
-    top: 0px;
-    font-weight: bold;       
-    color: inherit;         
-    font-style: normal;      
+    font-weight: bold;
+    color: #fff;
 }
 
 .githublink {
-    width: 90%;
+    width: 100%;
     padding: 12px 20px;
     font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    border-radius: 25px;
-    color: black;
-    border: 2px solid #ccc;
-    background-color: #f8f8f8;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 10px;
+    color: #1a1a1a;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 12px;
     transition: all 0.3s ease;
-    outline: none;
 }
-  
+
 .githublink:focus {
-    border-color:  black;
-    background-color: #ffffff;
-}
-
-
-.assessment-button {
-    background-color: var(--apply-bg);
-    margin-top: 5px;
-    color: #1976d2;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: var(--transition);
-}
-
-.assessment-button:hover{
-    background-color: var(--secondary);
-    border-color: transparent;
-    transition: var(--transition);
-    transform: translateY(-2px);
+    border-color: #1976d2;
+    background-color: #fff;
 }
 
 .questions {
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
-.question{
-    margin-top: 4px;
-}
-.doc-box {
+.question {
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex: 1;
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+.question select {
+    margin-top: 6px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.doc-box {
+    width: 100%;
+    text-align: center;
     padding: 20px;
-    margin-left: 20px;
-    
-    border-radius: 8px;
-    border: 1px dashed white;
-    height: fit-content;
+    border-radius: 12px;
+    border: 2px dashed #aaa;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .doc-box h2 {
-    color: white;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.file-input {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
 }
 
 .file-info {
-    margin-top: 20px;
-    padding: 10px;
-    color: black;
+    margin-top: 12px;
     background-color: #f8f8f8;
-    border: 1px black;
-    border-radius: 5px;
-}
-
-.file-input{
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px dashed white;
-}
-
-.file-input:hover{
-    transition: var(--transition);
-    transform: translateY(-1px);
-}
-
-.OA-button{
-    margin-top: 8px;
+    color: #333;
+    padding: 8px;
+    border-radius: 6px;
 }
 
 .terms {
-    margin-top: 15px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #ddd;
+    text-align: left;
 }
 
-.terms-style{
+.terms-style {
     font-style: italic;
     text-decoration: underline;
+    color: #97c3ff;
+}
+
+.OA-button {
+    margin-top: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+.assessment-button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #e0ecff;
+    color: #1976d2;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.assessment-button:hover {
+    background-color: #1976d2;
+    color: white;
+    transform: translateY(-2px);
 }
