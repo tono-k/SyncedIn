@@ -66,9 +66,9 @@ const ResumeCard = () => {
 
 
       <div className="resume-actions">
-        <button className="btn-secondary" onClick={handleFeedbackClick}>
+        {/* <button className="btn-secondary" onClick={handleFeedbackClick}>
           Get AI Feedback
-        </button>
+        </button> */}
 
         {resumeFile && (
           <button
