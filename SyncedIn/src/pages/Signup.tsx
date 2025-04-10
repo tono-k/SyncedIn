@@ -1,15 +1,16 @@
-import {useContext, useState} from 'react';
+import { useContext, useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {UserContext, UserContextProps} from '../UserContext'; 
 import './Signup.css';
 
 function Signup() {
-  const {setUserData} = useContext(UserContext) as UserContextProps; 
+  const { userData, setUserData } = useContext(UserContext) as UserContextProps;
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [interests, setInterests] = useState<string[]>([]);
   const [isChecked, setIsChecked] = useState(false);
+  const [submitted, setSubmitted] = useState(false); // NEW
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [resumePreview, setResumePreview] = useState<string>('');
 
@@ -43,19 +44,25 @@ function Signup() {
   const CompleteSignUp = () => {
     if (!fullName || !email || interests.length === 0 || !isChecked || !resumeFile) {
       alert('Please fill out all the information before signing up');
-    }
-    else {
+    } else {
       setUserData({
         email, 
         fullName, 
         interests,
-        resume: resumePreview, // Store the URL to display the resume
+        resume: resumeFile, // Use actual file, not the preview URL
         AppliedJobs: []
       });
-      navigate('/homepage');
+      setSubmitted(true); // NEW
     }
   };
 
+  useEffect(() => {
+    if (submitted && userData.fullName !== '') {
+      navigate('/homepage');
+    }
+  }, [submitted, userData.fullName, navigate]);
+
+  
   return (
     <>
       <div className="main">

@@ -32,7 +32,7 @@ const JobTeamPage = () => {
               <h3>{member.name}</h3>
               <p>{member.title}</p>
               <div className="team-card-actions">
-                <a href={`mailto:${member.email}`}>Message</a>
+              <a href={`mailto:${member.email}`}>Message</a>
                 {member.linkedin && (
                   <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
                     LinkedIn

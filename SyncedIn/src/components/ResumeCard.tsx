@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useContext, useRef, useMemo, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { UserContext, UserContextProps } from "../UserContext"
 import "./ResumeCard.css"
 
@@ -9,27 +9,15 @@ const ResumeCard = () => {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const resumeFile = userData.resume
 
-  // Create persistent object URL for embed + view
-  const resumeURL = useMemo(() => {
-    return resumeFile ? URL.createObjectURL(resumeFile) : null
-  }, [resumeFile])
-
-  // Cleanup URL on unmount
-  useEffect(() => {
-    return () => {
-      if (resumeURL) {
-        URL.revokeObjectURL(resumeURL)
-      }
-    }
-  }, [resumeURL])
-
   const handleFeedbackClick = () => {
     navigate("/resume-feedback")
   }
 
   const handleViewResume = () => {
-    if (resumeURL) {
-      window.open(resumeURL, '_blank')
+    if (resumeFile) {
+      const fileUrl = URL.createObjectURL(resumeFile)
+      window.open(fileUrl, '_blank')
+      setTimeout(() => URL.revokeObjectURL(fileUrl), 1000)
     }
   }
 
@@ -53,7 +41,7 @@ const ResumeCard = () => {
   return (
     <div className="resume-card">
       <div className="resume-header">
-        <div className="resume-section">Resume</div>
+      <div className="resume-section">Resume</div>
         {resumeFile && <div className="ai-badge">AI</div>}
       </div>
 
@@ -61,7 +49,7 @@ const ResumeCard = () => {
         {resumeFile ? (
           resumeFile.type === "application/pdf" ? (
             <embed
-              src={resumeURL ?? ""}
+              src={URL.createObjectURL(resumeFile)}
               type="application/pdf"
               className="resume-preview-embed"
             />
@@ -75,6 +63,7 @@ const ResumeCard = () => {
           <img src="/placeholder.svg" alt="Resume not uploaded" />
         )}
       </div>
+
 
       <div className="resume-actions">
         <button className="btn-secondary" onClick={handleFeedbackClick}>
@@ -90,6 +79,7 @@ const ResumeCard = () => {
             View Resume
           </button>
         )}
+
 
         <button
           className="btn-outline change-resume"
