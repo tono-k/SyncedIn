@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import OnlineAssessment from './pages/OnlineAssessment';
 import Terms from "./pages/Terms"
 import JobTeamPage from './pages/JobTeamPage';
+import ResumeFeedback from "./pages/ResumeFeedback";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/application" element={<Application />} />
           <Route path="/onlineassessment" element={<OnlineAssessment />} />
           <Route path="/team/:jobId" element={<JobTeamPage />} />
+          <Route path="/resume-feedback" element={<ResumeFeedback />} />
         </Routes>
       </div>
     </div>
