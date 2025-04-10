@@ -82,7 +82,7 @@ button.btn-secondary {
 }
 
 button.btn-outline {
-  background-color: white;
+  background-color: #977d58;
   color: var(--primary);
   border: 2px solid var(--primary);
   font-weight: 600;
@@ -112,17 +112,30 @@ button.btn-outline:hover {
 
 /* Added for resume upload preview in Signup */
 .resume-preview-thumbnail {
-  margin-top: 8px;
-  padding: 8px;
-  background-color: #e8f5e9;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  box-shadow: var(--box-shadow);
 }
 
 .resume-preview-thumbnail p {
-  margin: 0;
-  color: #2e7d32;
+  margin: 4px 0;
+  color: #333;
   font-size: 14px;
+  font-weight: 500;
+}
+
+.resume-preview-thumbnail p:first-child {
+  font-weight: 600;
+  color: #1f2937; /* Deep slate/charcoal */
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.resume-preview-thumbnail p:last-child {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 400;
 }

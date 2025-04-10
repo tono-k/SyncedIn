@@ -3,33 +3,25 @@ import { useContext, useRef } from "react"
 import { UserContext, UserContextProps } from "../UserContext"
 import "./ResumeCard.css"
 
-interface ResumeCardProps {
-  resumePath: string
-  hasAiFeedback?: boolean
-}
-
-const ResumeCard = ({ resumePath, hasAiFeedback = false }: ResumeCardProps) => {
+const ResumeCard = () => {
   const navigate = useNavigate()
   const { userData, setUserData } = useContext(UserContext) as UserContextProps
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const resumeFile = userData.resume
 
   const handleFeedbackClick = () => {
     navigate("/resume-feedback")
   }
-  
-  const handleFilterJobs = () => {
-    console.log("Showing AI matches")
-  }
-  
+
   const handleViewResume = () => {
-    // If it's a PDF, we can open it in a new tab
-    if (resumePath && resumePath.trim() !== '') {
-      window.open(resumePath, '_blank')
+    if (resumeFile) {
+      const fileUrl = URL.createObjectURL(resumeFile)
+      window.open(fileUrl, '_blank')
+      setTimeout(() => URL.revokeObjectURL(fileUrl), 1000)
     }
   }
 
   const handleChangeResume = () => {
-    // Trigger the hidden file input
     if (fileInputRef.current) {
       fileInputRef.current.click()
     }
@@ -37,17 +29,11 @@ const ResumeCard = ({ resumePath, hasAiFeedback = false }: ResumeCardProps) => {
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files
-    
     if (files && files.length > 0) {
       const file = files[0]
-      
-      // Create a URL for preview
-      const fileUrl = URL.createObjectURL(file)
-      
-      // Update the resume URL in context
       setUserData({
         ...userData,
-        resume: fileUrl
+        resume: file
       })
     }
   }
@@ -56,34 +42,54 @@ const ResumeCard = ({ resumePath, hasAiFeedback = false }: ResumeCardProps) => {
     <div className="resume-card">
       <div className="resume-header">
         <h3>Resume</h3>
-        {hasAiFeedback && <div className="ai-badge">AI</div>}
+        {resumeFile && <div className="ai-badge">AI</div>}
       </div>
+
       <div className="resume-preview" onClick={handleViewResume} style={{ cursor: 'pointer' }}>
-        {resumePath ? (
-          <embed 
-            src={resumePath} 
-            type="application/pdf" 
-            width="100%" 
-            height="100%"
-          />
+        {resumeFile ? (
+          resumeFile.type === "application/pdf" ? (
+            <embed
+              src={URL.createObjectURL(resumeFile)}
+              type="application/pdf"
+              className="resume-preview-embed"
+            />
+          ) : (
+            <div className="resume-preview-thumbnail">
+              <p>📄 {resumeFile.name}</p>
+              <p>Preview not supported. Click to open.</p>
+            </div>
+          )
         ) : (
           <img src="/placeholder.svg" alt="Resume not uploaded" />
         )}
       </div>
+
+
       <div className="resume-actions">
         <button className="btn-secondary" onClick={handleFeedbackClick}>
           Get AI Feedback
         </button>
-        {resumePath && (
-          <button className="btn-primary view-resume" onClick={handleViewResume} style={{ marginTop: '8px' }}>
+
+        {resumeFile && (
+          <button
+            className="btn-secondary view-resume"
+            onClick={handleViewResume}
+            style={{ marginTop: '8px' }}
+          >
             View Resume
           </button>
         )}
-        <button className="btn-outline change-resume" onClick={handleChangeResume} style={{ marginTop: '12px', fontSize: '15px' }}>
+
+
+        <button
+          className="btn-outline change-resume"
+          onClick={handleChangeResume}
+          style={{ marginTop: '12px', fontSize: '15px' }}
+        >
           Change Resume
         </button>
-        {/* Hidden file input */}
-        <input 
+
+        <input
           type="file"
           ref={fileInputRef}
           onChange={handleFileChange}

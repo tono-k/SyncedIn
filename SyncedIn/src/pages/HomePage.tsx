@@ -27,7 +27,7 @@ const HomePage = () => {
       <div className="home-sidebar">
       <ProfileSidebar user={{
           name: userData.fullName,
-          resume: userData.resume
+          resume: userData.resume ? userData.resume.name : "No resume uploaded"
         }} />
       </div>
       <div className="home-content">
