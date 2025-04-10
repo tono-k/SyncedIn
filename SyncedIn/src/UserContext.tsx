@@ -14,10 +14,11 @@ export interface UserData {
   email: string;
   fullName: string;
   interests: string[];
-  resume: File | null; // Changed from string to File
+  resume: File | null;
   AppliedJobs: JobCardProps[];
 }
 
+// to make available to other components
 export interface UserContextProps {
   userData: UserData;
   setUserData: React.Dispatch<React.SetStateAction<UserData>>;
@@ -31,7 +32,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     email: '',
     fullName: '',
     interests: [],
-    resume: null, //Initialized as null
+    resume: null,
     AppliedJobs: [],
   });
 

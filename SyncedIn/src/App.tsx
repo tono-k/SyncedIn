@@ -7,12 +7,12 @@ import OnlineAssessment from './pages/OnlineAssessment';
 import Terms from "./pages/Terms";
 import TeamPage from "./pages/JobTeamPage";
 import { ThemeProvider } from "./ThemeContext";
-import { UserProvider } from './UserContext'; // If needed globally
+import { UserProvider } from './UserContext';
 
 function App() {
   return (
     <ThemeProvider>
-      <UserProvider> {/* Wrap this too if you're using context */}
+      <UserProvider>
         <Navbar />
         <div className="content">
           <Routes>

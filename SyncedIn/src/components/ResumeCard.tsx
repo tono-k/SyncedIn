@@ -1,17 +1,12 @@
-import { useNavigate } from "react-router-dom"
 import { useContext, useRef } from "react"
 import { UserContext, UserContextProps } from "../UserContext"
 import "./ResumeCard.css"
 
 const ResumeCard = () => {
-  const navigate = useNavigate()
   const { userData, setUserData } = useContext(UserContext) as UserContextProps
   const fileInputRef = useRef<HTMLInputElement>(null)
   const resumeFile = userData.resume
 
-  const handleFeedbackClick = () => {
-    navigate("/resume-feedback")
-  }
 
   const handleViewResume = () => {
     if (resumeFile) {
@@ -42,7 +37,6 @@ const ResumeCard = () => {
     <div className="resume-card">
       <div className="resume-header">
       <div className="resume-section">Resume</div>
-        {resumeFile && <div className="ai-badge">AI</div>}
       </div>
 
       <div className="resume-preview" onClick={handleViewResume} style={{ cursor: 'pointer' }}>

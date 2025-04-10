@@ -1,18 +1,14 @@
-
-
 const Terms = () => {
     return (
         <div className="terms-container">
           <h1>Terms and Conditions for Job Application</h1>
-          
           <p><strong>1. Eligibility</strong></p>
           <p>You must be eligible to work in the specified region for the job position you are applying to.</p>
-          
           <p><strong>2. Personal Information</strong></p>
           <p>
             By applying, you consent to the collection and use of your personal data (e.g., name, contact details, and resume) solely for the purpose of processing your job application.
           </p>
-    
+
           <p><strong>3. Accuracy of Information</strong></p>
           <p>
             You agree to provide accurate and complete information in your application. Providing false information may result in the rejection of your application.

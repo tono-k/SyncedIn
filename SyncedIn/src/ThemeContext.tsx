@@ -1,4 +1,3 @@
-// src/ThemeContext.tsx
 import { createContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext({
@@ -12,7 +11,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
-
   }, [theme]);
 
   const toggleTheme = () => {

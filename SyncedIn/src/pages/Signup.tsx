@@ -14,11 +14,13 @@ function Signup() {
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [resumePreview, setResumePreview] = useState<string>('');
 
+  // more could be added after
   const allInterests = [
     "Java", "C++", "C#", "Frontend", "UML Designer",
-    "JavaScript", "MERN", "Python", "ML", "Backend", "Database" // should add/remove more...
+    "JavaScript", "MERN", "Python", "ML", "Backend", "Database"
   ];
 
+  // change the user's interest list
   const changeInterests = (interest: string) => {
     setInterests((prevListOfInterests) => {
       if (prevListOfInterests.includes(interest)) 
@@ -45,7 +47,7 @@ function Signup() {
     if (!fullName || !email || interests.length === 0 || !isChecked || !resumeFile) {
       alert('Please fill out all the information before signing up');
     } else {
-      setUserData({
+      setUserData ({
         email, 
         fullName, 
         interests,
@@ -98,6 +100,7 @@ function Signup() {
             accept=".pdf,.doc,.docx"
             onChange={handleResumeUpload}
           />
+          
           {resumePreview && (
             <div className="resume-preview-thumbnail">
               <p>Resume uploaded successfully</p>

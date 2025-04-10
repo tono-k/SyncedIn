@@ -7,7 +7,6 @@
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
    background-color:antiquewhite;
-
   /* --primary: #25262e; */
   /* --primary-light: #39393f; */
   /* --primary-dark: #1e1e1a57; */
@@ -32,8 +31,6 @@
   /* --site-color: #191818; */
   --navbar-bg-light: #ffffff;
   --navbar-bg-dark: #07005C;
-
-
 }
 
 a {

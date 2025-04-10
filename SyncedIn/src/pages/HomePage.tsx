@@ -12,10 +12,10 @@ const HomePage = () => {
   const [jobs, setJobs] = useState(mockJobs)
   const [loading, setLoading] = useState(true)
   const { userData } = useContext(UserContext)!
-  const { theme, toggleTheme } = useContext(ThemeContext) // <-- Get theme state
+  const { theme, toggleTheme } = useContext(ThemeContext) // Get theme state
 
   useEffect(() => {
-    // Simulate API call
+    // Simulate loading
     setTimeout(() => {
       setLoading(false)
     }, 500)
