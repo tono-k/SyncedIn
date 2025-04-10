@@ -94,3 +94,29 @@
     grid-template-columns: 1fr;
   }
 }
+
+.theme-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.theme-toggle-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--secondary-dark);
+}
+
+.theme-toggle-btn {
+  z-index: 200;
+  position: relative;
+}
+

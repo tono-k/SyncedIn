@@ -5,10 +5,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  --primary: #25262e;
-  --primary-light: #39393f;
-  --primary-dark: #1e1e1a57;
+  /* background-color: #242424; */
+   background-color:antiquewhite;
+
+  /* --primary: #25262e; */
+  /* --primary-light: #39393f; */
+  /* --primary-dark: #1e1e1a57; */
   --secondary: #977d58;
   --secondary-light: #d7b27e;
   --secondary-dark: #70532e;
@@ -16,18 +18,21 @@
   --tertiary-light: #a4c8f0;
   --tertiary-dark: #3b6a9f;
   --text-light: #ffffff;
-  --text-dark: #212121;
+  /* --text-dark: #212121; */
   --background: #f5f5f5;
   --text-light: #ffffff;
   --text-dark: #000000;
-  --navbar-bg: #07005c;
+  /* --navbar-bg: #07005c; */
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-  --card-bg: #33333197;
+  /* --card-bg: #33333197; */
   --card-bg-light: #f9f9f9;
   --apply-bg: #f1f1f1;
-  --site-color: #191818;
+  /* --site-color: #191818; */
+  --navbar-bg-light: #ffffff;
+  --navbar-bg-dark: #07005C;
+
 
 }
 
@@ -42,10 +47,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -83,4 +87,85 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* DARK THEME OVERRIDES */
+body.dark {
+  background-color: #0a0a23;
+  color: var(--text-light);
+}
+
+body.dark .job-card,
+body.dark .home-content,
+body.dark .home-sidebar {
+  background-color: #1e1e2f;
+  color: var(--text-light);
+}
+
+body.dark .theme-toggle-btn {
+  background-color: var(--secondary);
+  color: white;
+}
+
+body.dark .theme-toggle-btn:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* LIGHT THEME OVERRIDES */
+body.light {
+  background-color: #f5f5f5;
+  color: var(--text-dark);
+  --navbar-bg: var(--navbar-bg-light);
+}
+
+body.light .job-card,
+body.light .home-content,
+body.light .home-sidebar {
+  background-color: #ffffff;
+  color: var(--text-dark);
+}
+body.light .topBar,
+body.light .navbar {
+  color: var(--text-dark);
+}
+body.light .home-sidebar {
+  background-color: #f1f1f1;
+}
+
+body.dark .home-sidebar {
+  background-color: #0a0a23;
+}
+
+body.light .profile-card {
+  background-color: #d8c1a2 ;
+  color: var(--text-dark);
+}
+body.light .resume-card {
+  background-color: #d8c1a2 ;
+  color: var(--text-dark);
+}
+
+body.light .resume-section {
+  color: #ffffff;
+}
+
+body.light .home-sidebar{
+  color: #5a92d3;
+}
+
+
+body.light .theme-toggle-btn {
+  background-color: var(--tertiary);
+  color: white;
+}
+
+body.light .theme-toggle-btn:hover {
+  background-color: var(--tertiary-dark);
+}
+
+body.light a {
+  color: var(--tertiary-dark);
+}
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

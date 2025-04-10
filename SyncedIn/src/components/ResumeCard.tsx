@@ -41,7 +41,7 @@ const ResumeCard = () => {
   return (
     <div className="resume-card">
       <div className="resume-header">
-        <h3>Resume</h3>
+      <div className="resume-section">Resume</div>
         {resumeFile && <div className="ai-badge">AI</div>}
       </div>
 

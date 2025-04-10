@@ -1,34 +1,38 @@
 .home-page {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 24px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 120px 40px 40px 40px; /* top padding ensures space below navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  }
   
-  .home-sidebar {
-    position: sticky;
-    top: 50px;
-    height: fit-content;
-  }
+.home-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
   
   .home-content {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 24px;
   }
   
   .jobs-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px; /* this smooths spacing when wrapped */
   }
   
   .jobs-header h2 {
-    margin-top: 120px;
+    margin: 0;
     font-size: 24px;
     font-weight: 600;
   }
-  
   
   .jobs-filter select {
     padding: 8px 12px;
@@ -63,4 +67,35 @@
     }
   }
   
+  .theme-toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+  
+  .theme-toggle-btn {
+    z-index: 200;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--tertiary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: var(--secondary-dark);
+  }
+  @media (max-width: 768px) {
+    .home-page {
+      grid-template-columns: 1fr;
+      padding: 100px 20px 20px 20px;
+    }
+  
+    .home-sidebar {
+      position: static;
+    }
+  }
   

@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import ProfileSidebar from "../components/ProfileSidebar.tsx"
 import JobCard from "../components/JobCard.tsx"
 import "./HomePage.css"
-import { useContext } from "react";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../UserContext"
+import { ThemeContext } from "../ThemeContext.tsx"
 
 // Mock data for jobs
 import { mockJobs } from "../assets/mockData.tsx";
@@ -11,8 +11,8 @@ import { mockJobs } from "../assets/mockData.tsx";
 const HomePage = () => {
   const [jobs, setJobs] = useState(mockJobs)
   const [loading, setLoading] = useState(true)
-  const { userData } = useContext(UserContext)!;
-
+  const { userData } = useContext(UserContext)!
+  const { theme, toggleTheme } = useContext(ThemeContext) // <-- Get theme state
 
   useEffect(() => {
     // Simulate API call
@@ -21,24 +21,29 @@ const HomePage = () => {
     }, 500)
   }, [])
 
-
   return (
     <div className="home-page">
       <div className="home-sidebar">
-      <ProfileSidebar user={{
+        <ProfileSidebar user={{
           name: userData.fullName,
           resume: userData.resume ? userData.resume.name : "No resume uploaded"
         }} />
       </div>
-      <div className="home-content">
+
         <div className="jobs-header">
           <h2>Job Recommendations</h2>
-          <div className="jobs-filter">
-            <select defaultValue="relevance">
-              <option value="location">Filter Based On Resume</option>
-            </select>
+          <div className="header-actions">
+            <div className="theme-toggle-container">
+              <button onClick={toggleTheme} className="theme-toggle-btn">
+                {theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode"}
+              </button>
+            </div>
+            <div className="jobs-filter">
+              <select defaultValue="relevance">
+                <option value="location">Filter Based On Resume</option>
+              </select>
+            </div>
           </div>
-        </div>
 
         <div className="jobs-grid">
           {loading ? (
@@ -64,4 +69,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
