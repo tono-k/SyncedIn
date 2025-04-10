@@ -41,9 +41,9 @@ const JobCard = ({ id, company, title, location, description, skills, applied = 
     e.stopPropagation() // Prevent card click
     navigate(`/team/${id}`)
   }
-
+  // removed cardClickHandler
   return (
-    <div className="job-card" onClick={handleCardClick}>
+    <div className="job-card"> 
       <div className="job-card-header">
         <h3>{title}</h3>
       </div>
