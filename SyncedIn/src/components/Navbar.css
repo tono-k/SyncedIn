@@ -30,7 +30,8 @@
 .navbar-container {
   width: 100%;
   background-color: var(--navbar-bg);
-  color: var(--text-light);
+  color: var(--text-dark);
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
