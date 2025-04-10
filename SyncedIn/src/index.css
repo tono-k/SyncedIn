@@ -174,3 +174,7 @@ body.light .team-card-actions a {
   background-color: var(--tertiary);
   color: white;
 }
+
+body.dark .team-heading{
+  color: white;
+}
