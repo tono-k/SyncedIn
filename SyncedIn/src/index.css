@@ -169,3 +169,8 @@ body.light a {
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body.light .team-card-actions a {
+  background-color: var(--tertiary);
+  color: white;
+}
