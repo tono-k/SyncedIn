@@ -21,6 +21,9 @@ const HomePage = () => {
     }, 500)
   }, [])
 
+  
+  console.log(userData.AppliedJobs, userData.fullName)
+  
   return (
     <div className="home-page">
       <div className="home-sidebar">
