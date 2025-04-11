@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider>
       <UserProvider>
-        <Navbar />
+        <Navbar/>
         <div className="content">
           <Routes>
             <Route path="/" element={<Signup />} />

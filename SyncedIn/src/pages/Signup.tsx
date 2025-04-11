@@ -69,7 +69,7 @@ function Signup() {
     <>
       <div className="main">
         <div className="formBox">
-          <div className="formTitle"> SyncedIn Inc. </div>
+          <div className="formTitle"> Sign Up to use SyncedIn </div>
 
           <label> Full Name </label>
           <input
@@ -100,7 +100,7 @@ function Signup() {
             accept=".pdf,.doc,.docx"
             onChange={handleResumeUpload}
           />
-          
+
           {resumePreview && (
             <div className="resume-preview-thumbnail">
               <p>Resume uploaded successfully</p>

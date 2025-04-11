@@ -3,14 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0d0d0d;
 }
   
 .formBox {
-  background: #171616;
+  background: #151414;
   padding: 20px;
-  border-radius: 20px;
-  border: white;
-  border-style: groove;
   width: 700px;
   font-size: 20px;
 }
@@ -29,7 +27,7 @@
   margin-bottom: 30px;
   border: none;
   border-radius: 5px;
-  background: #333;
+  background: #232323;
   color: white;
   height: 35px;
   font-size: 20px;

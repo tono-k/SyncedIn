@@ -6,13 +6,13 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-   background-color:antiquewhite;
+
   /* --primary: #25262e; */
   /* --primary-light: #39393f; */
   /* --primary-dark: #1e1e1a57; */
-  --secondary: #977d58;
+  --secondary: #948b63;
   --secondary-light: #d7b27e;
-  --secondary-dark: #70532e;
+  --secondary-dark: #241d13;
   --tertiary: #5a92d3;
   --tertiary-light: #a4c8f0;
   --tertiary-dark: #3b6a9f;
@@ -30,7 +30,7 @@
   --apply-bg: #f1f1f1;
   /* --site-color: #191818; */
   --navbar-bg-light: #ffffff;
-  --navbar-bg-dark: #07005C;
+  --navbar-bg-dark: #070332;
 }
 
 a {
@@ -88,7 +88,7 @@ button:focus-visible {
 
 /* DARK THEME OVERRIDES */
 body.dark {
-  background-color: #0a0a23;
+  background-color: #0d0d0d;
   color: var(--text-light);
 }
 

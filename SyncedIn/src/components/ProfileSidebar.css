@@ -3,8 +3,8 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  margin-top: 20px;
   position: relative;
+  background-color: #0d0d0d;
 }
 
 /* Profile Card */
@@ -27,7 +27,6 @@
   left: 0;
   right: 0;
   height: 60px;
-  background: linear-gradient(135deg, var(--primary), #0093e9);
 }
 
 .profile-avatar {
