@@ -88,7 +88,7 @@ button:focus-visible {
 
 /* DARK THEME OVERRIDES */
 body.dark {
-  background-color: #0d0d0d;
+  background-color: #05021d;
   color: var(--text-light);
 }
 
