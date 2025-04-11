@@ -98,12 +98,14 @@
 }
 
 .theme-toggle-container {
+  margin-left: 150px;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
 
 .theme-toggle-btn {
+  
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   border: none;
